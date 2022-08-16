@@ -1,0 +1,24 @@
+body {
+  background-color: rgb(73, 129, 233);
+  color: white;
+}
+
+h1 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.5rem;
+}
+li {
+  list-style: none;
+  font-size: 1.5rem;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover,
+a:active {
+  text-decoration: underline;
+  color: white;
+}
