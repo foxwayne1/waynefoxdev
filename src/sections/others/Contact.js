@@ -53,7 +53,7 @@ const Contact = ({ hero = true, bg = "dark", ...rest }) => {
                   <Col lg="4" className="mb-4 mb-lg-0">
                     <Link href="https://www.linkedin.com/in/waynefoxdev/">
                       <a target="_blank">
-                        <Button>Linked in</Button>
+                        <Button>Linkedin</Button>
                       </a>
                     </Link>
                   </Col>
