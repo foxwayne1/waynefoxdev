@@ -1,17 +1,17 @@
-import React from 'react'
-import Link from 'next/link'
-import { Title } from '../Core'
+import React from "react";
+import Link from "next/link";
+import { Title } from "../Core";
 
-const Logo = ({ color = 'front', height, className = '', ...rest }) => {
+const Logo = ({ color = "front", height, className = "", ...rest }) => {
   return (
-    <Link href='/'>
+    <Link href="/">
       <a className={`${className}`} {...rest}>
-        <Title color={color} variant='cardLg' className='mb-0'>
-          Frontend Fox
+        <Title color={color} variant="cardLg" className="mb-0">
+          Wayne Fox
         </Title>
       </a>
     </Link>
-  )
-}
+  );
+};
 
-export default Logo
+export default Logo;

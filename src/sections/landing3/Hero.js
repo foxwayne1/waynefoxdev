@@ -1,54 +1,57 @@
-import React, { useContext } from 'react'
-import styled from 'styled-components'
-import { Container, Row, Col } from 'react-bootstrap'
+import React, { useContext } from "react";
+import styled from "styled-components";
+import { Container, Row, Col } from "react-bootstrap";
 
-import GlobalContext from '../../context/GlobalContext'
-import { Title, ButtonIcon, Section, Box } from '../../components/Core'
-import bgHeroPattern from '../../assets/image/webp/hero-pattern.webp'
-import imgL from '../../assets/image/jpg/wf-nbg.png'
+import GlobalContext from "../../context/GlobalContext";
+import { Title, ButtonIcon, Section, Box } from "../../components/Core";
+import bgHeroPattern from "../../assets/image/webp/hero-pattern.webp";
+// import imgL from '../../assets/image/jpg/wf-nbg.png'
+import imgL from "../../assets/image/jpg/transparent-removebg-preview.png";
 
 const SectionStyled = styled(Section)`
   &::before {
     position: absolute;
     top: 0;
-    content: '';
+    content: "";
     width: 100%;
     height: 120%;
     background: url(${bgHeroPattern}) top center no-repeat;
     background-size: cover;
     z-index: -1;
   }
-`
+`;
 
 const Hero = () => {
-  const gContext = useContext(GlobalContext)
+  const gContext = useContext(GlobalContext);
 
   return (
     <>
       {/* <!-- Hero Area --> */}
-      <SectionStyled hero className='position-relative'>
+      <SectionStyled hero className="position-relative">
         <Container>
-          <Box pb='40px'>
+          {/* <Box pb="40px">
             <img
               src={imgL}
-              alt=''
+              alt=""
               css={`
                 border-radius: 50rem !important;
+                max-width: 250px;
               `}
             />
-          </Box>
-          <Row className='align-items-lg-end'>
-            <Col lg='8' sm='12' className='mb-5 mb-lg-0'>
+          </Box> */}
+          <Row className="align-items-lg-end">
+            <Col lg="12" sm="12" className="mb-5 mb-lg-0">
               <Box>
-                <Title variant='hero'>I'm Wayne a Frontend Developer.</Title>
+                <Title variant="hero">I'm Wayne a Frontend Developer.</Title>
               </Box>
             </Col>
-            <Col lg='4' sm='12'>
-              <Box pl='1.25rem'>
+            <Col lg="12" sm="12">
+              <Box pl="1.25rem">
                 <ButtonIcon
-                  onClick={e => {
-                    e.preventDefault()
-                    gContext.toggleContact()
+                  style={{ marginTop: "50px" }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    gContext.toggleContact();
                   }}
                 >
                   Let's Talk Now
@@ -59,7 +62,7 @@ const Hero = () => {
         </Container>
       </SectionStyled>
     </>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
